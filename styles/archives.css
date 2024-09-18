@@ -1,0 +1,93 @@
+#postblock{
+    width: 100%;
+    border-collapse: collapse;
+}
+#postblock tr{
+    height: 75px;
+    border-bottom: solid 5px #2d726b;
+}
+#postblock .time{
+    width: 18%;
+    text-align: center;
+    padding-left: 1%;
+    font-size: 25px;
+}
+#postblock .posttitle{
+    padding-right: 1%;
+    font-size: 25px;
+    text-align: left;
+}
+#postblock .posttitle a{
+    color: black;
+}
+.nopost{
+    text-align: center;
+    font-size: 25px;
+}
+#pagenum{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding-inline-start: 0px;
+    width: 100%;
+    list-style-type: none;
+}
+#pagenum .num{
+    width: 40px;
+    font-size: 20px;
+    margin: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    border: solid 5px #2d726b;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+#pagenum .num:hover{
+    background-color: #2d726b;
+}
+#pagenum .nownum{
+    width: 40px;
+    font-size: 20px;
+    margin: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    border: solid 5px #2d726b;
+    background-color: #2d726b;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+@media only screen and (max-width: 1024px){
+    #postblock{
+        margin: 0 4%;
+        width: 92%;
+    }
+    #postblock #tabletitle{
+        display: none;
+    }
+    #postblock tr{
+        height: fit-content;
+        border-bottom-width: 2px;
+    }
+    #postblock .time{
+        display: table-row;
+        width: auto;
+        text-align: left;
+        font-size: 18px;
+    }
+    #postblock .posttitle{
+        display: table-row;
+        font-size: 18px;
+    }
+    #pagenum .num{
+        font-size: 15px;
+        width: 30px;
+    }
+    #pagenum .nownum{
+        font-size: 15px;
+        width: 30px;
+    }
+    hr{
+        display: none;
+    }
+}

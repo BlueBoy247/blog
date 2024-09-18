@@ -1,0 +1,320 @@
+*{
+    margin: 0;
+}
+body{
+    background-color: #81D8D0;
+}
+body::-webkit-scrollbar {
+    width: 7px;
+}
+body::-webkit-scrollbar-button {
+    background: transparent;
+    border-radius: 4px;
+    height: 5px;
+}
+body::-webkit-scrollbar-track-piece {
+    background: #bbbbbb;
+    border-radius: 4px;
+}
+body::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid slategrey;
+}
+body::-webkit-scrollbar-track {
+    box-shadow: #bbbbbb;
+    border-radius: 4px;
+}
+
+/*header*/
+header{
+    height: 8vh;
+    padding: 0 1.5vw;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background-color: #005048;
+    overflow: hidden;
+}
+#shead{
+    display: inline-flex;
+    height: inherit;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    text-decoration: none;
+    color: #ffffff;
+}
+#menu{
+    display: none;
+}
+#menu svg{
+    height: 80%;
+}
+nav{
+    float: right;
+    height: inherit;
+    margin: 0;
+    padding: 0;
+}
+nav ul{
+    height: inherit;
+    padding: 0;
+}
+nav ul li{
+    display: inline;
+    height: inherit;
+}
+#mobilenav{
+    display: none;
+}
+.navb{
+    display: inline-flex;
+    border: 0;
+    color: #53a39b;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 25px;
+    width: 100px;
+    height: inherit;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.5vw;
+    transition: 0.3s;
+}
+.navb:hover{
+    border: 0;
+    color: #ffffff;
+    background-color: #2d726b;
+}
+.navb svg{
+    width: 25px;
+    height: 25px;
+}
+@media only screen and (max-width: 1024px){
+    #menu{
+        float: right;
+        display: inline-flex;
+        width: 100px;
+        border: 0;
+        color: #53a39b;
+        text-decoration: none;
+        cursor: pointer;
+        height: inherit;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        transition: 0.3s;
+    }
+    #menu:hover{
+        border: 0;
+        color: #ffffff;
+        background-color: #2d726b;
+    }
+    nav{
+        display: none;
+    }
+    #mobilenav{
+        display: none;
+        position: fixed;
+        top: 8vh;
+        right: 0;
+        width: 0;
+        min-height: 93vh;
+        height: auto;
+        padding-left: 0;
+        background-image: linear-gradient(to right, #2d726d 0%, #2d726d 100%), linear-gradient(to right, rgba(0, 0, 0, 70%) 0%, rgba(0, 0, 0, 70%) 100%);
+        background-clip: content-box, padding-box;
+        transition: 0.3s;
+        list-style-type: none;
+    }
+    .navb{
+        width: 100%;
+        height: 8vh;
+        font-size: 30px;
+    }
+    .navb svg{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/*main content*/
+main{
+    overflow: hidden;
+    min-height: 85vh;
+}
+.pagehead{
+    display: flex;
+    width: 100%;
+    height: 40vh;
+    padding: 0.5vh 0;
+    background-image: url(/blog/pictures/title_bg.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+.pagetitle{
+    text-align: center;
+    font-size: 75px;
+}
+.pagesubtitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+.pagesubtitle p{
+    padding: 8px;
+    border: solid 5px #46ada3;
+    border-radius: 20px;
+}
+.content{
+    overflow: hidden;
+    min-height: 120px;
+    background-color: rgba(255, 255, 255, 0.75);
+    margin: 1% 5vw 40px 5vw;
+    padding: 2%;
+    border-radius: 15px;
+    color: #000000;
+    box-shadow: 0 10px 10px -5px;
+}
+.content h2{
+    margin: 1.5% 0;
+    font-size: 30px;
+}
+.content h3{
+    margin: 1.5% 0;
+    font-size: 25px;
+}
+.content p{
+    margin: 1% 0;
+    font-size: 20px;
+}
+@media only screen and (max-width: 600px){
+    .content{
+        background-color: transparent;
+        min-height: fit-content;
+        margin: 1% 0 40px 0;
+        padding: 3%;
+        border-radius: 5px;
+        box-shadow: 0 0 0 0;
+    }
+    .content h2{
+        margin: 1.5% 0;
+        font-size: 25px;
+    }
+    .content h3{
+        margin: 1.5% 0;
+        font-size: 20px;
+    }
+    .content p{
+        font-size: 15px;
+    }
+}
+hr{
+    background-color: #2d726b;
+    height: 3px;
+    margin: 1% 0%;
+    border: 0;
+}
+
+/*footer*/
+footer{
+    height: 7vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #46ada3;
+    overflow: hidden;
+}
+#siterights{
+    color: #ffffff;
+    padding: 0 0 0 2%;
+    text-align: left;
+    font-size: 20px;
+    display: inline;
+}
+#siterights a{
+    text-decoration: none;
+    color: #6cfccc;
+}
+#out-link-button{
+    margin: 2% 0%;
+    padding: 0 2% 0 0;
+    overflow: hidden;
+    display: inline-flex;
+    justify-content: right;
+}
+.outb{
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    color: #ffffff;
+    fill:#ffffff;
+    transition: 0.3s;
+    text-decoration: none;
+    margin: 0 0.5vw;
+    overflow: visible;
+}
+.outb:hover{
+    fill: #005048;
+    color: #005048;
+}
+@media only screen and (max-width: 1024px){
+    footer{
+        display: block;
+        height: fit-content;
+        padding: 2vh 0;
+    }
+    #siterights{
+        color: #ffffff;
+        padding: 2% 0;
+        text-align: center;
+        font-size: 15px;
+        display: block;
+    }
+    #out-link-button{
+        margin: 2% 0%;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/*other*/
+.inline-block{
+    display: inline-block;
+}
+.zhwb{
+    font-weight: bold;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.zhw{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.enw1{
+    font-family: 'Raleway', sans-serif;
+}
+.enw2{
+    font-family: 'Labrada', serif;
+}
+.enw3{
+    font-family: 'Righteous', cursive;
+}

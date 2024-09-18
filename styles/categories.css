@@ -1,0 +1,76 @@
+#subjectc{
+    height: fit-content;
+    padding-bottom: 5%;
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    gap: 15px;
+    background-color: inherit;
+    border-radius: 0px;
+    color: inherit;
+    box-shadow: 0 0 0 0;
+    font-size: 20px;
+}
+@media only screen and (max-width: 768px){
+    #subjectc{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    #subjectc{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+.subblock{
+    background-color: rgba(255, 255, 255, 0.75);
+    margin: 1.3% 2%;
+    padding: 4%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    cursor:pointer;
+    overflow: hidden;
+    transform:scale(1,1);
+    transition: all 0.5s ease-out;
+    color: #000000;
+    box-shadow: 0 10px 10px -5px;
+    text-decoration: none;
+}
+.subblock:hover{
+    transform:scale(1.03,1.03);
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #777777;
+    box-shadow: 0 10px 10px -5px;
+}
+.subtitle{
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+}
+.subbrief{
+    font-size: 20px;
+}
+
+#backdiv{
+    display: flex;
+    align-items: center;
+    color: #000000;
+    text-decoration: none;
+    width: fit-content;
+    margin-left: 5vw;
+}
+#backdiv span{
+    font-size: 25px;
+}
+#backdiv:hover{
+    color: #999999;
+}
+#back{
+    overflow: hidden;
+}
+@media only screen and (max-width: 768px){
+    #backdiv{
+        display: none;
+    }
+}
