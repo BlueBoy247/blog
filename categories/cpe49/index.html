@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
-    <title>分類 Categories | BlueBoy Space</title>
+    <title>CPE49 Writeup | BlueBoy Space</title>
     <!-- meta tag -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,6 +28,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9189513725790874"
      crossorigin="anonymous"></script>
     <!-- other source -->
+    <link rel="stylesheet" href="/blog/styles/archives.css">
     <link rel="stylesheet" href="/blog/styles/categories.css">
     <script src="/blog/scripts/categories.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
@@ -105,39 +106,41 @@
     <main>
         <div class="pagehead">
             <p class="pagetitle">
-                <span class="zhwb">分類</span>
+                <span class="zhwb">CPE49 Writeup</span>
             </p>
         </div>
-        <div class="content" id="subjectc">
-            <a href="./projects/" class="subblock">
-                <div class="subtitle zhwb">專案紀錄</div>
-                <div class="subbrief zhw">共 <span id="projects"><script>countPosts("projects");</script></span> 篇</div>
+        <div id="post">
+            <a id="backdiv" href="javascript:history.back()">
+                <span class="material-symbols-outlined" id="back">chevron_left</span>
+                <span class="zhwb">回上頁</span>
             </a>
-            <a href="./courses/" class="subblock">
-                <div class="subtitle zhwb">課程紀錄</div>
-                <div class="subbrief zhw">共 <span id="courses"><script>countPosts("courses");</script></span> 篇</div>
-            </a>
-            <a href="./competitions/" class="subblock">
-                <div class="subtitle zhwb">競賽紀錄</div>
-                <div class="subbrief zhw">共 <span id="competitions"><script>countPosts("competitions");</script></span> 篇</div>
-            </a>
-            <a href="./reviews/" class="subblock">
-                <div class="subtitle zhwb">服務及工具評價</div>
-                <div class="subbrief zhw">共 <span id="reviews"><script>countPosts("reviews");</script></span> 篇</div>
-            </a>
-            <a href="./lotuxctf/" class="subblock">
-                <div class="subtitle zhwb">LoTuX CTF Writeup</div>
-                <div class="subbrief zhw">共 <span id="LoTuX_CTF_Writeup"><script>countPosts("LoTuX_CTF_Writeup");</script></span> 篇</div>
-            </a>
-            <a href="./picoctf/" class="subblock">
-                <div class="subtitle zhwb">picoCTF Writeup</div>
-                <div class="subbrief zhw">共 <span id="picoCTF_Writeup"><script>countPosts("picoCTF_Writeup");</script></span> 篇</div>
-            </a>
-            <a href="./cpe49/" class="subblock">
-                <div class="subtitle zhwb">CPE49 Writeup</div>
-                <div class="subbrief zhw">共 <span id="cpe49"><script>countPosts("cpe49");</script></span> 篇</div>
-            </a>
+            <div class="content">
+                <h2 class="zhwb" style="text-align: center;">類別介紹</h2>
+                <p class="zhw">
+                    大學程式能力檢定 (Collegiate Programming Examination, 簡稱 CPE)，是一個針對大學生的程式能力檢定，每年舉辦四次，由學生透過線上程式設計，利用電腦自動評判，以檢測程式設計能力，題目主要來自知名線上程式解題平台 Uva Online Judge。
+                    <br>
+                    一顆星選集，俗稱 CPE49，是公告於 CPE 官網上的一顆星參考題目，通常將此選集練完後，實際應試必能答對至少一題，故建議初學者可加以練習。
+                    <br>
+                    [<a href="https://cpe.cse.nsysu.edu.tw/environment.php#starList" target="_blank">一顆星選集</a>]
+                    [<a href="https://par.cse.nsysu.edu.tw/~advprog/star.php" target="_blank">完整 CPE 題目星等分類</a>]
+                </p>
+                <hr>
+                <table id="postblock">
+                    <caption>
+                        <h2 class="zhwb">文章列表</h2>
+                    </caption>
+                    <thead>
+                        <tr id="tabletitle">
+                            <th class="time zhwb">發布時間</th>
+                            <th class="posttitle zhwb">文章標題</th>
+                        </tr>
+                    </thead>
+                    <tbody id="postlist"></tbody>
+                </table>
+                <ol id="pagenum"></ol>
+            </div>
         </div>
+        <script>listPostsPageByTag("cpe49");</script>
     </main>
     <footer>
         <p class="enw2" id="siterights">
