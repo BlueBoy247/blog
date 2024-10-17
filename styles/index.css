@@ -57,50 +57,7 @@ header{
     }
 }
 
-/*webtime part*/
-#webtime{
-    width: 100%;
-    border-collapse:collapse;
-}
-#webtime caption{
-    display: none;
-}
-#webtime tr{
-    height: 75px;
-    border-bottom: solid 5px #2d726b;
-}
-#webtime .time{
-    width: 18%;
-    text-align: center;
-    padding-left: 1%;
-    font-size: 25px;
-}
-#webtime .event{
-    padding-right: 1%;
-    font-size: 25px;
-}
-@media only screen and (max-width: 1024px){
-    #webtime{
-        margin: 0 4%;
-        width: 92%;
-    }
-    #webtime #webtimetitle{
-        display: none;
-    }
-    #webtime tr{
-        height: fit-content;
-    }
-    #webtime .time{
-        display: table-row;
-        text-align: left;
-        font-size: 20px;
-    }
-    #webtime .event{
-        display: table-row;
-        font-size: 20px;
-    }
-}
-
+/*countdown part*/
 .countdown{
     margin-bottom: 20px;
 }
