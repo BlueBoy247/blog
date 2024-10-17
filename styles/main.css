@@ -201,6 +201,12 @@ main{
     font-size: 20px;
 }
 @media only screen and (max-width: 600px){
+    .pagehead{
+        height: 30vh;
+    }
+    .pagetitle{
+        font-size: 60px;
+    }
     .content{
         background-color: transparent;
         min-height: fit-content;
@@ -295,6 +301,9 @@ footer{
         overflow: hidden;
         display: flex;
         justify-content: center;
+    }
+    .outb{
+        margin: 0 1vw;
     }
 }
 
