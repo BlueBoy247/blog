@@ -82,10 +82,10 @@ function listPostsBlockByTag(tagName, startNum, endNum) {
 
     for (let i = startNum; i < endNum && i < fileList.length; i++) {
         const post = fileList[i];
-        const postUrl = `/blog/archives/${post.id}/index.html`;
+        const postUrl = `/blog/archives/${post.id}`;
 
         $.ajax({
-            url: postUrl,
+            url: `${postUrl}/index.html`,
             async: false,
             success: function (postContent) {
                 const doc = new DOMParser().parseFromString(postContent, 'text/html');
