@@ -128,14 +128,44 @@
             </p>
             <h3 class="zhwb" id="參考解答">參考解答</h3>
             <div class="tabs">
-                <div class="tab active zhw" data-target="java-code">Java</div>
+                <div class="tab active zhw" data-target="c-code">C</div>
+                <div class="tab zhw" data-target="java-code">Java</div>
+                <div class="tab zhw" data-target="python-code">Python</div>
             </div>
-            <div class="tab-content active" id="java-code">
+            <div class="tab-content active" id="c-code">
+                <pre><code class="c">
+#include &lt;stdio.h&gt;
+int tripleNPlusOne(int n){
+	int count = 1;
+	while(n!=1){
+		if(n%2==0) n/=2;
+		else n=n*3+1;
+		count++;
+	}
+	return count;
+}
+void main(){
+	int i,j,temp_i,temp_j,max;
+	while(scanf("%d %d",&i,&j) != EOF){
+		max=0;
+		temp_i = i>j ? j : i;
+		temp_j = i>j ? i : j;
+		for(int k=temp_i;k<=temp_j;k++){
+			int count = tripleNPlusOne(k);
+			if(count>max) max=count;
+		}
+		printf("%d %d %d\n",i,j,max);
+	}
+}
+                </code></pre>
+                <script>hljs.initHighlightingOnLoad();</script>
+            </div>
+            <div class="tab-content" id="java-code">
                 <pre><code class="java">
 import java.util.*;
 public class c039 {
     public static Scanner input = new Scanner(System.in);
-    public static int threeNPlusOne(int n) {
+    public static int tripleNPlusOne(int n) {
         int count = 1;
         while (n != 1) {
             if (n % 2 == 0) {
@@ -152,27 +182,45 @@ public class c039 {
             int i = input.nextInt();
             int j = input.nextInt();
             int max = 0;
-            if (i > j) {
-                for(int k = j; k <= i; k++) {
-                    int count = threeNPlusOne(k);
-                    if (count > max) {
-                        max = count;
-                    }
+            int tempI = i>j ? j : i;
+            int tempJ = i>j ? i : j;
+            for(int k = tempI; k <= tempJ; k++) {
+                int count = tripleNPlusOne(k);
+                if (count > max) {
+                    max = count;
                 }
             }
-            else{
-                for(int k = i; k <= j; k++) {
-                    int count = threeNPlusOne(k);
-                    if (count > max) {
-                        max = count;
-                    }
-                }
-            }            
             System.out.println(i + " " + j + " " + max);
         }
         input.close();
     }
 }
+                </code></pre>
+                <script>hljs.initHighlightingOnLoad();</script>
+            </div>
+            <div class="tab-content" id="python-code">
+                <pre><code class="python">
+def TripleNPlusOne(n):
+    count=1
+    while n!=1:
+        if n%2:
+            n=n*3+1
+        else:
+            n//=2
+        count+=1
+    return count
+while True:
+    try:
+        i,j=map(int,input().split())
+        max_count=0
+        temp_i, temp_j = (i,j) if i < j else (j,i)
+        for k in range(temp_i,temp_j+1):
+            count=TripleNPlusOne(k)
+            if count > max_count:
+                max_count=count
+        print(f'{i} {j} {max_count}')
+    except EOFError:
+        break
                 </code></pre>
                 <script>hljs.initHighlightingOnLoad();</script>
             </div>
