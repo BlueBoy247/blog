@@ -134,29 +134,7 @@
             </div>
             <div class="tab-content active" id="c-code">
                 <pre><code class="c">
-#include &lt;stdio.h&gt;
-int tripleNPlusOne(int n){
-	int count = 1;
-	while(n!=1){
-		if(n%2==0) n/=2;
-		else n=n*3+1;
-		count++;
-	}
-	return count;
-}
-void main(){
-	int i,j,temp_i,temp_j,max;
-	while(scanf("%d %d",&i,&j) != EOF){
-		max=0;
-		temp_i = i>j ? j : i;
-		temp_j = i>j ? i : j;
-		for(int k=temp_i;k<=temp_j;k++){
-			int count = tripleNPlusOne(k);
-			if(count>max) max=count;
-		}
-		printf("%d %d %d\n",i,j,max);
-	}
-}
+
                 </code></pre>
                 <script>hljs.initHighlightingOnLoad();</script>
             </div>
