@@ -42,17 +42,14 @@ function listPostsPageByTag(tagName, now) {
     }
 }
 
-function listPostNumByTag(name,start,end,now,postNum,page){
-    for (let i=start; i<end; i++) {
-        if(i<0 || i>=page){
-            continue;
-        }
+function listPostNumByTag(tagName, start, end, now, postNum, page) {
+    for (let i = start; i < end; i++) {
+        if (i < 0 || i >= page) continue;
 
-        if (i==now){
-            $('#pagenum').append(`<li class="nownum" onclick="$('#postlist').empty();listPostsBlockByTag(${name}, ${i*postNum}, ${(i+1)*postNum});listPostsPageByTag(${i});">${i+1}</li>`);
-        }else{
-            $('#pagenum').append(`<li class="num" onclick="$('#postlist').empty();listPostsBlockByTag(${name}, ${i*postNum}, ${(i+1)*postNum});listPostsPageByTag(${i});">${i+1}</li>`);
-        }
+        const active = i === now ? 'nownum' : 'num';
+        $('#pagenum').append(`
+            <li class="${active}" onclick="$('#postlist').empty(); listPostsBlockByTag('${tagName}', ${i * postNum}, ${(i + 1) * postNum}); listPostsPageByTag('${tagName}', ${i});">${i + 1}</li>
+        `);
     }
 }
 
@@ -101,19 +98,5 @@ function listPostsBlockByTag(tagName, startNum, endNum) {
                 $('#postlist').append(element);
             }
         });
-    }
-}
-
-function listPostNumByTag(tagName, start, end, now, postNum, page) {
-    for (let i = start; i < end; i++) {
-        if (i < 0 || i >= page) continue;
-
-        const isActive = i === now ? 'nownum' : 'num';
-        $('#pagenum').append(`
-            <li class="${isActive}" onclick="
-                $('#postlist').empty();
-                listPostsBlockByTag('${tagName}', ${i * postNum}, ${(i + 1) * postNum});
-                listPostsPageByTag('${tagName}', ${i});
-            ">${i + 1}</li>`);
     }
 }
