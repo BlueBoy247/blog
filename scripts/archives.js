@@ -34,11 +34,10 @@ function listPageNum(start,end,now,postNum,page){
             continue;
         }
 
-        if (i==now){
-            $('#pagenum').append(`<li class="nownum" onclick="$('#postlist').empty();listPostsBlock(${i*postNum}, ${(i+1)*postNum});listPostsPage(${i});">${i+1}</li>`);
-        }else{
-            $('#pagenum').append(`<li class="num" onclick="$('#postlist').empty();listPostsBlock(${i*postNum}, ${(i+1)*postNum});listPostsPage(${i});">${i+1}</li>`);
-        }
+        const active = i === now ? 'nownum' : 'num';
+        $('#pagenum').append(`
+            <li class="${active}" onclick="$('#postlist').empty(); listPostsBlock(${i * postNum}, ${(i + 1) * postNum}); listPostsPage(${i});">${i + 1}</li>
+        `);
     }
 }
 
